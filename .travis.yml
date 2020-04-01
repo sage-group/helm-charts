@@ -4,7 +4,7 @@ if: branch = master
 
 before_install:
   - curl -L https://git.io/get_helm.sh -v v3.1.2 | bash
-  - wget https://get.helm.sh/helm-v3.1.2-linux-amd64.tar.gz && tar -zxvf helm-v3.1.2-linux-amd64.tar.gz && mv linux-amd64/helm /usr/local/bin/helm
+  - wget https://get.helm.sh/helm-v3.1.2-linux-amd64.tar.gz && tar -zxvf helm-v3.1.2-linux-amd64.tar.gz && mkdir -p ~/bin/ && mv linux-amd64/helm ~/bin/helm
   - helm init --client-only
 
 script:
