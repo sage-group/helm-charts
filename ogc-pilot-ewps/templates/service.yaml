@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "ogc-pilot-ewps.fullname" . }}
+  labels:
+    {{- include "ogc-pilot-ewps.labels" . | nindent 4 }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: 5000
+      protocol: TCP
+      name: {{ .Release.Name }}-wps
+  selector:
+    {{- include "ogc-pilot-ewps.selectorLabels" . | nindent 4 }}

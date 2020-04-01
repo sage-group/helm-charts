@@ -1,0 +1,11 @@
+1. eWPS is deployed and is reachable as:
+   - WPS Endpoint: http://{{ .Values.ingress.host }}/wps
+   - WPS Output base: http://{{ .Values.ingress.host }}/data
+
+Jobs are executed using the `{{ include "ogc-pilot-ewps.serviceAccountName" . }}` service account.
+
+{{- if .Values.rbac.create -}}
+The service account has beed granted cluster admin privileges
+{{- else -}}
+The service account has not been granted any privileges. For proper operation grant job execution privileges
+{{- end -}}
