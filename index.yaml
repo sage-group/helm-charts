@@ -1,0 +1,18 @@
+apiVersion: v1
+entries:
+  ogc-pilot-ewps:
+  - apiVersion: v2
+    appVersion: 0.1.1
+    created: "2020-04-01T18:19:49.736172137Z"
+    dependencies:
+    - name: ewps-static
+      repository: ""
+    description: EWPS OGC Pilot
+    digest: ba179ed1216f197d30d3c84c2d5be83c88ad9290599dfdccd88b1cbca7a3979d
+    icon: https://sage-helm-repository.s3.eu-west-1.amazonaws.com/ewps.png
+    name: ogc-pilot-ewps
+    type: application
+    urls:
+    - ogc-pilot-ewps-0.1.6.tgz
+    version: 0.1.6
+generated: "2020-04-01T18:19:49.735046243Z"
